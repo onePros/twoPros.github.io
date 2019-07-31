@@ -1,0 +1,109 @@
+/*首先link这个reset.css文件进行CSS初始化*/
+body{
+	font-size: 14px;
+	color: #333333;
+	font-family: "微软雅黑", sans-serif;
+}
+a{
+	color: #333333;
+}
+a:hover{
+	color: #333333;
+	text-decoration: none;
+}
+
+/*图标字体 引入font文件夹 format表示格式 */
+@font-face {
+  font-family: 'my1866Font';
+  src:  url('../font/MiFie-Web-Font.eot');
+  src:  url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
+        url('../font/MiFie-Web-Font.ttf') format('truetype'),
+        url('../font/MiFie-Web-Font.woff') format('woff'),
+        url('../font/MiFie-Web-Font.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.wjs_icon{
+	font-family: 'my1866Font';
+}
+/*===================*/
+
+/* http://www.fontawesome.com.cn/ */
+
+/*具体的字体图标==> bootstrap.css 文件里面的资源 人为的更改前面的名称 */
+.wjs_icon_E900::before {
+  content: "\e900";
+}
+.wjs_icon_E901::before {
+  content: "\e901";
+}
+.wjs_icon_E902::before {
+  content: "\e902";
+}
+.wjs_icon_E903::before {
+  content: "\e903";
+}
+.wjs_icon_E904::before {
+  content: "\e904";
+}
+.wjs_icon_E905::before {
+  content: "\e905";
+}
+.wjs_icon_E906::before {
+  content: "\e906";
+}
+.wjs_icon_E907::before {
+  content: "\e907";
+}
+.wjs_icon_phone::before {
+  content: "\e908";
+}
+.wjs_icon_tel::before {
+  content: "\e909";
+}
+.wjs_icon_new01::before {
+  content: "\e90e";
+}
+.wjs_icon_new02::before {
+  content: "\e90f";
+}
+.wjs_icon_new03::before {
+  content: "\e910";
+}
+.wjs_icon_new04::before {
+  content: "\e911";
+}
+.wjs_icon_logo::before {
+  content: "\e920";
+}
+.wjs_icon_parter01::before {
+  content: "\e946";
+}
+.wjs_icon_parter02::before {
+  content: "\e92f";
+}
+.wjs_icon_parter03::before {
+  content: "\e92e";
+}
+.wjs_icon_parter04::before {
+  content: "\e92a";
+}
+.wjs_icon_parter05::before {
+  content: "\e929";
+}
+.wjs_icon_parter06::before {
+  content: "\e931";
+}
+.wjs_icon_parter07::before {
+  content: "\e92c";
+}
+.wjs_icon_parter08::before {
+  content: "\e92b";
+}
+.wjs_icon_parter09::before {
+  content: "\e92d";
+}
+.wjs_icon_word::before {
+  content: "\e93e";
+}
+/*==================*/

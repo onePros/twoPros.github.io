@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--视口设置：支持移动端-->
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<!-- viewport 是用户网页的可视区域 简称视口
+		 
+		1、width：控制 viewport 的大小，可以指定的一个值，如 600，或者特殊的值，如 device-width为设备的宽度（单位为缩放为 100% 时的 CSS 的像素） 
+		2、initial-scale：初始缩放比例，也即是当页面第一次 load 的时候缩放比例。
+		3、maximum-scale：允许用户缩放到的最大比例
+		4、minimum-scale：允许用户缩放到的最小比例。
+		5、user-scalable：用户是否可以手动缩放。
+
+		设置 meta 属性为 user-scalable=no 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉
+
+		-->
+<!--浏览器的兼容-->
+<!-- Edge 模式通知IE浏览器 以最高级别的可用模式显示内容。即如果你有IE9的话说明你有IE789，那么就调用高版本的那个也就是IE9。 -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>粤嵌科技-微金所首页</title>
+
+<!--  
+
+	 把favicon.ico图标放到网站根目录下，在网页的<head></head>中加入  多数浏览器将自动检测并使用它
+	
+	 Shortcut Icon 就是在网址列前面出现的Icon
+     给网页标题添加一个显示的小图标 icon是显示在地址栏最前面的一个16*16的小图标
+-->
+	<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+
+	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css" />
+<!-- css样式重置表 -->
+	<link rel="stylesheet" href="./css/reset.css" />
+<!-- 微金所的css样式 -->
+	<link rel="stylesheet" href="./css/weijinsuo.css" />
+
+</head>
+<body>
+		<!--1、头部区域 start-->
+		<!-- hidden-xs超小屏和hidden-sm 都设置为隐藏 -->
+		<header class="wjs_topBar hidden-sm hidden-xs">
+				<!--container大容器 1170+15*2=1200-->
+				<div class="container">
+					<!-- 分成12等份   2 5 3 2 份 -->
+					<div class="row">
+						<div class="col-md-2">
+							<a href="#" class="wjs_app">
+								<span class="wjs_icon wjs_icon_phone"></span>
+								<span>手机微金所</span>
+								<span class="glyphicon glyphicon-menu-down"></span>
+								<img src="images/code.jpg"/>
+							</a>
+						</div>
+						<div class="col-md-5">
+							<span class="wjs_icon wjs_icon_tel"></span>
+							<span>4006-89-4006(服务时间：9：00-21：00)</span>
+						</div>
+						<div class="col-md-2">
+							<a href="#">常见问题</a>
+							<a href="#" class="ml_10">财富登录</a>
+						</div>
+						<div class="col-md-3">
+							<a href="#" class="btn btn-danger btn-register ">免费注册</a>
+							<a href="#" class="btn btn-link btn-login">登录</a>
+						</div>
+					</div>
+				</div>
+		</header>
+			<!--头部区域  end -->
+
+     <!--===============================-->
+
+    <!--2、导航栏 start-->
+		<!--<div class="navbar wjs_nav" data-spy="affix" data-offset-    top="200">-->
+		<div class="navbar wjs_nav">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">
+						<span class="wjs_icon wjs_icon_logo"></span>
+						<span class="wjs_icon wjs_icon_word"></span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" 
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">我要投资</a></li>
+						<li><a href="#">我要借贷</a></li>
+						<li><a href="#">平台介绍</a></li>
+						<li><a href="#">新手介绍</a></li>
+						<li><a href="#">最新动态</a></li>
+						<li><a href="#">微平台</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right hidden-sm">
+						<li><a href="#">个人中心</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--/导航栏 end-->
+
+    <!--===============================-->
+
+		<!-- 3、轮播图区域 start-->
+    <div class="wjs_banner">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>   
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <a href="#" class="pc_imgBox hidden-xs" style="background-image:url(images/slide_01_2000x410.jpg);"></a>
+                       <a href="#" class="mb_imgBox hidden-sm hidden-md hidden-lg">
+                       	 <img src="./images/slide_01_640x340.jpg" alt="">
+                       </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="pc_imgBox hidden-xs" style="background-image:url(images/slide_02_2000x410.jpg);"></a>
+                        <a href="#" class="mb_imgBox hidden-sm hidden-md hidden-lg">
+                       	 <img src="./images/slide_02_640x340.jpg" alt="">
+                       </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="pc_imgBox hidden-xs" style="background-image:url(images/slide_03_2000x410.jpg);"></a>
+                        <a href="#" class="mb_imgBox hidden-sm hidden-md hidden-lg">
+                       	 <img src="./images/slide_03_640x340.jpg" alt="">
+                       </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="pc_imgBox hidden-xs" style="background-image:url(images/slide_04_2000x410.jpg);"></a>
+                        <a href="#" class="mb_imgBox hidden-sm hidden-md hidden-lg">
+                       	 <img src="./images/slide_04_640x340.jpg" alt="">
+                       </a>
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="carousel-control left" href="#myCarousel" 
+                   data-slide="prev" role="button"> 
+                   <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+                   <span class="sr-only">Previous</span>
+                   </a>
+                <a class="carousel-control right" href="#myCarousel" 
+                   data-slide="next" role="button"> 
+                   <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+                   <span class="sr-only">Next</span>
+                   </a>
+            </div>
+    </div>
+    <!--轮播图区域  end -->
+
+    <!--===============================-->
+
+	    <!-- 4、产品栏 start  菜鸟教程的多媒体对象部分      -->
+    <div class="wjs_info hidden-xs">
+        <!-- 版心 -->
+        <div class="container">
+                <div class="row">
+
+                  <div class="col-md-4 col-sm-6">
+                     <a href="javascript:;">
+                       <!-- 媒体对象 -->
+                       <div class="media">
+                           <div class="media-left">
+                                <span class="wjs_icon wjs_icon_E903"></span>
+                           </div>
+                           <div class="media-body">
+                                <h4 class="media-heading"> 支付交易保障</h4>
+                                <p> 银联支付全称保证支付安全</p>
+                           </div>
+                       </div>
+                     </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                     <a href="javascript:;">
+                       <!-- 媒体对象 -->
+                       <div class="media">
+                           <div class="media-left">
+                                   <span class="wjs_icon wjs_icon_E903"></span>
+                           </div>
+                           <div class="media-body">
+                                <h4 class="media-heading"> 支付交易保障</h4>
+                                <p> 银联支付全称保证支付安全</p>
+                           </div>
+                       </div>
+                     </a>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                     <a href="javascript:;">
+                       <!-- 媒体对象 -->
+                       <div class="media">
+                           <div class="media-left">
+                                   <span class="wjs_icon wjs_icon_E903"></span>
+                           </div>
+                           <div class="media-body">
+                                <h4 class="media-heading"> 支付交易保障</h4>
+                                <p> 银联支付全称保证支付安全</p>
+                           </div>
+                       </div>
+                     </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                     <a href="javascript:;">
+                       <!-- 媒体对象 -->
+                       <div class="media">
+                           <div class="media-left">
+                              <span class="wjs_icon wjs_icon_E903"></span>
+                           </div>
+                           <div class="media-body">
+                              <h4 class="media-heading"> 支付交易保障</h4>
+                              <p> 银联支付全称保证支付安全</p>
+                           </div>
+                       </div>
+                     </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                     <a href="javascript:;">
+                       <!-- 媒体对象 -->
+                       <div class="media">
+                           <div class="media-left">
+                              <span class="wjs_icon wjs_icon_E903"></span>
+                           </div>
+                           <div class="media-body">
+                              <h4 class="media-heading"> 支付交易保障</h4>
+                              <p> 银联支付全称保证支付安全</p>
+                           </div>
+                       </div>
+                     </a>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                     <a href="javascript:;">
+                       <!-- 媒体对象 -->
+                       <div class="media">
+                           <div class="media-left">
+                              <span class="wjs_icon wjs_icon_E903"></span>
+                           </div>
+                           <div class="media-body">
+                              <h4 class="media-heading"> 支付交易保障</h4>
+                              <p> 银联支付全称保证支付安全</p>
+                           </div>
+                       </div>
+                     </a>
+                  </div>
+                </div>
+        </div>
+    </div>
+
+    <!--===============================-->
+
+    <!--5、立即预约 菜鸟教程的辅助类里面   -->
+    <div class="wjs_book">
+          <div class="container">
+            <div class="pull-left">
+              <span class="wjs_icon wjs_icon_E905"></span>
+              现在已有723人在排队，累计预约交易成功7571次。什么是预约投标?
+              <a href="#" class="book_link">立即预约</a>
+            </div>
+            <!--===============-->
+            <a href="#" class="pull-right hidden-xs">
+              <span class="wjs_icon wjs_icon_E905"></span>
+              微金所企业宣传片
+            </a>
+          </div>
+    </div>
+    <!--/立即预约-->
+
+    <!-- 6、产品推荐 start -->
+    <div class="wjs_product">
+      <div class="container">
+         <!-- nav tabs start -->
+         <div class="tabs_box">
+             <ul class="nav nav-tabs" role="tablist">
+                       <li role="presentation" class="active">
+                       <a href="#product_tab01" aria-controls="product_tab01" role="tab" data-toggle="tab">特别推荐</a>
+                       </li>
+                       <li role="presentation">
+                       <a href="#product_tab02" aria-controls="product_tab02" role="tab" data-toggle="tab">微投资</a>
+                       </li>
+                       <li role="presentation">
+                       <a href="#product_tab03" aria-controls="product_tab03" role="tab" data-toggle="tab">个人中心</a>
+                       </li>
+             </ul>
+         </div> 
+         <!-- nav tabs end -->
+
+         <!-- 选项卡 -->
+           <div class="tab-content">
+             <div role="tabpanel" class="tab-pane active" id="product_tab01">
+                <div class="col-md-4 col-sm-6 col-xs-12"> 
+                <a href="#" class="product_box active">
+                   <span class="tiyan"></span>
+                  <div class="left">
+                    <div class="title">新手体验1002期</div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <p class="word">
+                      <span>8</span>
+                      <sub>%</sub>
+                    </p>
+                    <p class="tips">年利率</p>
+                  </div>
+                </a> 
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12"> 
+                <a href="#" class="product_box">
+                  <div class="left">
+                    <div class="title">新手体验1003期</div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <!-- 设置进度条 -->
+                      <div class="progress">
+                                   <div class="progress-bar" role="progressbar" aria-valuenow="80" 
+                                   aria-valuemin="0" aria-valuemax="100" style="width: 80%;">80%</div>
+                  </div>
+                    </div>
+                  </div>
+                  <div class="right">
+                  
+                   <!-- ！！我们不一样的地方 宝和北字 -->
+                      <div class="wjs_tips">
+                        <span class="red">宝</span>
+                        <span class="green">北</span>
+                      </div>
+
+                    <p class="word">
+                      <span>8</span>
+                      <sub>%</sub>
+                    </p>
+                    <p class="tips">年利率</p>
+                  </div>
+                </a> 
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12"> 
+                <a href="#" class="product_box">
+                  <div class="left">
+                    <div class="title">新手体验1002期</div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <p class="word">
+                      <span>8</span>
+                      <sub>%</sub>
+                    </p>
+                    <p class="tips">年利率</p>
+                  </div>
+                </a> 
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12"> 
+                <a href="#" class="product_box">
+                  <div class="left">
+                    <div class="title">新手体验1002期</div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <p class="word">
+                      <span>8</span>
+                      <sub>%</sub>
+                    </p>
+                    <p class="tips">年利率</p>
+                  </div>
+                </a> 
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12"> 
+                <a href="#" class="product_box">
+                  <div class="left">
+                    <div class="title">新手体验1002期</div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <p class="word">
+                      <span>8</span>
+                      <sub>%</sub>
+                    </p>
+                    <p class="tips">年利率</p>
+                  </div>
+                </a> 
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12"> 
+                <a href="#" class="product_box">
+                  <div class="left">
+                    <div class="title">新手体验1002期</div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额(元)</p>
+                      <p>0.01万元</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <p class="word">
+                      <span>8</span>
+                      <sub>%</sub>
+                    </p>
+                    <p class="tips">年利率</p>
+                  </div>
+                </a> 
+                </div>
+               <!-- 选项卡 -->
+               </div>
+             <div role="tabpanel" class="tab-pane" id="product_tab02">2</div>
+             <div role="tabpanel" class="tab-pane" id="product_tab03">3</div>
+           </div>   
+          
+         
+      </div>
+    </div>
+    <!-- 6、产品推荐 end -->
+
+
+    <!--7、新闻页面 start-->
+    <div class="wjs_news">
+      <div class="container">
+      <div class="row">
+        <!-- 左边部分 新闻标题 -->
+        <div class="col-md-2 col-md-offset-2">
+          <h2>新闻动态</h2>
+        </div>
+
+        <!-- 中间部分 为什么竖着排  因为栅格只占了一份空间  -->
+        <div class="col-md-1">
+          <ul class="nav wjs_nav_list" role="tablist">
+            <!-- 画下划线 -->
+            <div class="line hidden-sm hidden-xs"></div>
+            <!-- 胶囊式标签页 bootstrap 3 中文文档  JavaScript脚本部分的标签页部分 -->
+            <li role="presentation" class="active">
+              <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                <span class="wjs_icon wjs_icon_new01"></span>
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                <span class="wjs_icon wjs_icon_new02"></span>
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+                <span class="wjs_icon wjs_icon_new03"></span>
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+                <span class="wjs_icon wjs_icon_new04"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 右边部分 -->
+        <div class="col-md-7">
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane  active" id="home">
+              <!-- 新闻列表 -->
+              <ol class="items">
+                <li>
+                  <!-- 点击锚点链接禁止跳转 -->
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期一！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期一！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期一！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期一！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期一！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期一！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期一！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期一！
+                  </a>
+                </li>
+              </ol>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="profile">
+              <ol class="items">
+                <li>
+                  <!-- 点击锚点链接禁止跳转 -->
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期二！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第二天，也是星期二！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第二天，也是星期二！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第二天，也是星期二！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第二天，也是星期二！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第二天，也是星期二！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第二天，也是星期二！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第二天，也是星期一！
+                  </a>
+                </li>
+              </ol>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="messages">
+              <ol class="items">
+                <li>
+                  <!-- 点击锚点链接禁止跳转 -->
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期三！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第三天，也是星期三！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第三天，也是星期三！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第三天，也是星期三！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第三天，也是星期三！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第三天，也是星期三！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第三天，也是星期三！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第三天，也是星期三！
+                  </a>
+                </li>
+              </ol>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="settings">
+              <ol class="items">
+                <li>
+                  <!-- 点击锚点链接禁止跳转 -->
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第一天，也是星期四！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第四天，也是星期四！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第四天，也是星期四！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第四天，也是星期四！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第四天，也是星期四！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第四天，也是星期四！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第四天，也是星期四！
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <span class="hidden-xs">今天是什么日子？</span>
+                    今天是2019年5月13日,母亲节过后的第四天，也是星期四！
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!--新闻页面  end -->  
+
+  <!--===============================-->
+
+  <!-- 7、选项卡 end -->
+  
+
+  <!--===============================-->
+
+    <!--8、公共底部start -->
+    <div class="wjs_footer">
+    <div class="footer-title">
+      <h3>合作伙伴</h3>
+    </div>
+    <div class="container">     <!-- 12-9 = 3 -->
+      <div class="row">
+        <!-- 
+         1、 （利用margin-left实现）
+         col-md-offset  向右偏移量 （整体向右移动  而且只能向右移动） 
+
+          2、以下两种 利用相对定位实现 
+          col-md-pull    向左偏移量
+          col-md-push    向右偏移量
+    
+         -->
+        <!-- 网格系统 12 =   9 + 1 + （左右偏移量各占一份 col-md-offset-1） -->
+        <div class="col-md-1 col-md-offset-1"><span class="wjs_icon wjs_icon_parter01"></span></div>
+        <div class="col-md-1 "><span class="wjs_icon wjs_icon_parter09"></span></div>
+        <div class="col-md-1 "><span class="wjs_icon wjs_icon_parter08"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter01"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter02"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter03"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter04"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter05"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter06"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter07"></span></div>
+
+      </div>
+    </div>
+  
+</div>
+    <!--公共底部end -->
+        
+
+	  <script src="lib/jquery/jquery.js" type="text/javascript"></script>
+
+	  <script src="lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+
+</body>
+</html>

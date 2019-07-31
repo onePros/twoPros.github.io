@@ -1,0 +1,787 @@
+/*首先link这个reset.css文件进行CSS初始化*/
+body{
+	font-size: 14px;
+	color: #333333;
+	font-family: "微软雅黑", sans-serif;
+}
+a{
+	color: #333333;
+}
+a:hover{
+	color: #333333;
+	text-decoration: none;
+}
+
+/*图标字体 引入font文件夹 format表示格式 */
+@font-face {
+  font-family: 'my1866Font';
+  src:  url('../font/MiFie-Web-Font.eot');
+  src:  url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
+        url('../font/MiFie-Web-Font.ttf') format('truetype'),
+        url('../font/MiFie-Web-Font.woff') format('woff'),
+        url('../font/MiFie-Web-Font.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.wjs_icon{
+	font-family: 'my1866Font';
+}
+/*===================*/
+
+/* http://www.fontawesome.com.cn/ */
+
+/*具体的字体图标==> bootstrap.css 文件里面的资源 人为的更改前面的名称 */
+.wjs_icon_E900::before {
+  content: "\e900";
+}
+.wjs_icon_E901::before {
+  content: "\e901";
+}
+.wjs_icon_E902::before {
+  content: "\e902";
+}
+.wjs_icon_E903::before {
+  content: "\e903";
+}
+.wjs_icon_E904::before {
+  content: "\e904";
+}
+.wjs_icon_E905::before {
+  content: "\e905";
+}
+.wjs_icon_E906::before {
+  content: "\e906";
+}
+.wjs_icon_E907::before {
+  content: "\e907";
+}
+.wjs_icon_phone::before {
+  content: "\e908";
+}
+.wjs_icon_tel::before {
+  content: "\e909";
+}
+.wjs_icon_new01::before {
+  content: "\e90e";
+}
+.wjs_icon_new02::before {
+  content: "\e90f";
+}
+.wjs_icon_new03::before {
+  content: "\e910";
+}
+.wjs_icon_new04::before {
+  content: "\e911";
+}
+.wjs_icon_logo::before {
+  content: "\e920";
+}
+.wjs_icon_parter01::before {
+  content: "\e946";
+}
+.wjs_icon_parter02::before {
+  content: "\e92f";
+}
+.wjs_icon_parter03::before {
+  content: "\e92e";
+}
+.wjs_icon_parter04::before {
+  content: "\e92a";
+}
+.wjs_icon_parter05::before {
+  content: "\e929";
+}
+.wjs_icon_parter06::before {
+  content: "\e931";
+}
+.wjs_icon_parter07::before {
+  content: "\e92c";
+}
+.wjs_icon_parter08::before {
+  content: "\e92b";
+}
+.wjs_icon_parter09::before {
+  content: "\e92d";
+}
+.wjs_icon_word::before {
+  content: "\e93e";
+}
+/*==================*/
+
+/* header start */
+
+.wjs_topBar{
+	font-size: 12px;
+	color: #666666;
+	border: 1px solid #CCCCCC;
+}
+.wjs_topBar a{
+	font-size: 12px;
+	color: #666666;
+}
+.wjs_topBar > .container > .row > div{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid red;
+}
+/*兄弟元素选择器*/
+.wjs_topBar > .container > .row > div + div{
+	border-left:1px solid blue;
+}
+.wjs_topBar .wjs_app{
+	display: block;
+}
+.wjs_topBar .wjs_app img{
+	display: none;
+}
+.wjs_topBar .wjs_app:hover img{
+	display:block;
+	 z-index: 100;       /*提高二维码图片的层级 */   
+  /*先分写 让他们合并  设置这一个小陷阱给他们*/
+	position: absolute;
+	top:40px;
+	left:50%;
+	margin-left:-60px;              /*移动图片宽度的一半 就居中了*/
+	border:1px solid red;
+}
+.wjs_topBar .col-md-2 .ml_10{
+  margin-left:10px;
+}
+.wjs_topBar .col-md-3 a:first-child{
+    color:#fff;
+}
+
+/*header end*/
+
+/*nav start*/
+.wjs_nav{
+  width: 100%;
+
+  background: pink;
+  border-bottom:2px solid #fff;
+  margin-bottom:0; 
+  /*去除默认的下margin(白色空隙)  有20px */
+
+  z-index: 15;   
+
+  /*合并的时候注意层级问题 */
+
+}
+.wjs_nav .wjs_icon_logo{
+  color:red;
+  font-size: 52px;
+  vertical-align: middle;  
+   /*垂直对齐方式=>把此元素放置在父元素的中部*/
+}
+.wjs_nav .wjs_icon_word {
+  font-size: 30px;
+  vertical-align: middle;
+}
+.wjs_nav .navbar-brand{
+  height: 88px;
+  line-height:55px;
+}
+/*:hover 选择器用于选择鼠标指针浮动在上面的元素*/
+/* fucus:当输入框获得焦点时，发生 focus 事件，改变它的背景色*/
+.wjs_nav .navbar-brand:hover
+,.wjs_nav .navbar-brand:focus
+{
+  color:red;
+  background-color: cyan;
+}
+.wjs_nav .navbar-nav>li>a{
+   color:#000;
+   height: 88px;
+   line-height: 55px;
+
+}
+
+
+.wjs_nav .navbar-nav >.active >a,
+.wjs_nav .navbar-nav >li >a:hover,
+.wjs_nav .navbar-nav >li >a:focus{
+    color:#111;
+    font-weight: bold;
+    border-bottom:3px solid red;
+    background-color: #fff;
+}
+
+/*移动端设置右上角的面包屑*/
+.wjs_nav .navbar-toggle{
+  border-color:orange;
+  margin-top:20px;
+}
+.wjs_nav .navbar-toggle .icon-bar{
+  background-color: red;
+}
+.wjs_nav .navbar-collapse{
+  border-color:blue;
+}
+/*媒体查询*/
+@media screen and (max-width: 768px){
+  .wjs_nav .container{
+    position: relative;
+  }
+  .wjs_nav .navbar-collapse{
+    width:100%;
+    margin:0;
+    background:cyan;
+    position: absolute;
+    left:0;
+    top:80px;
+
+  }
+}
+
+/*nav end*/
+
+/*banner start*/
+.carousel-indicators{
+  z-index: 5;
+}
+.wjs_banner .pc_imgBox{
+  display: block;             /* a标签由行内-块级 */
+  width:100%;
+  height:410px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.wjs_banner .mb_imgBox{
+  display: block;
+  width:100%;
+}
+.wjs_banner .mb_imgBox>img{
+  width:100%;
+  display:block;
+}
+/*banner end*/
+
+
+/*jiaoyi*/
+  .wjs_info{
+       width: 100%;
+       padding:60px;
+       border-bottom:1px solid blue;
+     }
+     .wjs_info >.container>.row>.col-md-4> a{
+     
+        padding:10px;
+        display: block;
+        background: cyan;
+        color:#000;
+     }
+      .wjs_info >.container>.row>.col-md-4> a:hover{
+        color:red;
+      }
+                                  /*数值后面不用分号*/
+      @media screen and (min-width:1200px){
+
+        .wjs_info>.container{
+
+           width:900px;
+        }
+      }
+
+
+
+   /*book start  */
+   .wjs_book{
+    width: 100%;
+    padding:30px 0;
+    background: pink;
+    border-bottom: 1px solid blue;
+   }
+    .wjs_book .book_link{
+      color:red;
+      border-bottom:1px dashed red;
+    }
+   .wjs_book .book_link:hover{
+    color:green;
+   }
+   .wjs_book .container span{
+    font-size: 25px;
+   }
+
+   @media screen and (min-width:1200px){
+    .wjs_book>.container{
+      width: 900px;
+    }
+   }
+
+
+   /*产品推荐部分start*/
+   .wjs_product{
+        padding:30px 0px;
+       }
+       .wjs_product .container .tabs_box>ul{
+        border-bottom:1px solid #ddd;
+       }
+       .wjs_product .container .tabs_box>ul li{
+        padding-right:20px;
+       }
+       .wjs_product .container .tabs_box>ul li.active a{
+       background: cyan;
+       border-radius: 0;
+       border-bottom:5px solid red;
+       }
+
+       /*card部分*/
+       .product_box{
+        display:block;
+        min-height: 180px;
+        margin-top:18px;
+        color:#444;
+        text-decoration: none;
+        border:1px solid #ccc;
+        position: relative;
+       }
+       .product_box:hover{
+        text-decoration: none;
+        color:#444;
+       }
+       .product_box.active{
+        background: #f01a1e;
+        color:#fff;
+       }
+        .product_box{
+        color:#000;
+       }
+        .product_box.active >.right>.word{
+        color:#fff;
+       }
+       .product_box>.right>.word{
+        color:red;
+       }
+       .product_box.active .left{
+        border-right:1px dashed #ccc;
+       }
+       .product_box .tiyan{
+        /*font-family: zidingyi;*/
+        font-family: 'my1866Font';
+        font-size: 40px;
+        position: absolute;
+        top:0px;
+        left:-1px;
+       }
+       .product_box .tiyan::before{
+        content:'\e915';
+        /*&#xe915; 中文转码 &#x解析成一个斜杠 \*/
+       }
+
+       .product_box .left .title{
+        text-align: center;
+        padding:15px 0;
+        font-size: 18px;
+       }
+       .product_box .left{
+        float: left;
+        width: 70%;    
+        height: 100%; 
+        padding:10px 0;   /* 后面添加内边距 */
+        border-right:1px dashed #ccc;
+       }
+       .product_box .left>div p{
+        font-size: 12px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+       }
+       /*重置进度条自带设置为的margin-bottom：20px; */
+       .product_box .left>div .progress{
+         margin-bottom:0;
+         
+       }
+        /*重置进度条的字体大小、字体颜色、背景色*/
+       .product_box .left>div .progress > div{
+        color:red;
+        font-size: 15px;
+        background: cyan;
+       }
+       .product_box .right{
+        float: right;
+        width: 30%;
+        height: 100%;
+       }
+       .product_box .right .word{
+        text-align: center;
+        margin-top:35px;
+       }
+       .product_box .right .word span{
+        font-size: 60px;
+        font-family: '黑体';
+        font-weight: bold;
+       }
+       .product_box .right .tips{
+        text-align: center;
+        margin-top:18px;
+       } 
+
+       /*画圆圈*/
+       .product_box::before,
+       .product_box::after{
+        content:'';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        right:28%;
+        /*top:0;*/
+       }
+       .product_box::before{
+        top:-6px;
+        box-shadow: 0px 1px 1px blue;   /*x y 模糊度  阴影颜色*/
+       }
+       .product_box::after{
+        bottom:-6px;
+        box-shadow: 0px -1px 1px blue;
+       }
+   /*产品推荐部分end*/
+
+
+  /*公共底部*/
+  .wjs_footer{
+      width: 100%;
+      padding:30px 0;
+      background: #ddd;
+      text-align: center;   /*文本居中*/
+
+      margin-top:10px;
+     } 
+     .wjs_footer ul{
+      width: 100%;
+      height: 100%;
+      list-style: none;
+     }
+     .wjs_footer ul li{
+      display: inline-block;
+    
+     }
+     .wjs_footer ul li a{
+      display: block;
+      padding:0 20px;
+
+     }
+     .wjs_footer ul li a span{
+      font-size: 65px;
+     }
+     .wjs_footer ul li a:hover span{
+      color:red;
+      /*font-size: 80px;*/
+     }
+
+     @media screen and (max-width:767px){
+      .wjs_footer ul li a span{
+        font-size: 30px;
+      }
+     }
+
+
+     /*6、产品推荐部分 start*/
+    .wjs_product{
+        padding:20px 0px;
+       }
+       .wjs_product .container .tabs_box>ul{
+        border-bottom:1px solid #ddd;
+       }
+       .wjs_product .container .tabs_box>ul li{
+        padding-right:20px;
+       }
+       .wjs_product .container .tabs_box>ul li.active a{
+       background: cyan;
+       border-radius: 0;
+       border-bottom:5px solid red;
+       }
+
+       /*card部分*/
+       .product_box{
+        display:block;
+        min-height: 180px;
+        margin-top:18px;
+        color:#444;
+        text-decoration: none;
+        border:1px solid #ccc;
+        position: relative;
+       }
+       .product_box:hover{
+        text-decoration: none;
+        color:#444;
+       }
+       .product_box.active{
+        background: #f01a1e;
+        color:#fff;
+       }
+        .product_box{
+        color:#000;
+       }
+        .product_box.active >.right>.word{
+        color:#fff;
+       }
+       .product_box>.right>.word{
+        color:red;
+       }
+       .product_box.active .left{
+        border-right:1px dashed #ccc;
+       }
+       .product_box .tiyan{
+        /*font-family: zidingyi;*/
+        font-family: 'my1866Font';
+        font-size: 40px;
+        position: absolute;
+        top:0px;
+        left:-1px;
+       }
+       .product_box .tiyan::before{
+        content:'\e915';
+        /*&#xe915; 中文转码 &#x解析成一个斜杠 \*/
+       }
+
+       .product_box .left .title{
+        text-align: center;
+        padding:15px 0;
+        font-size: 18px;
+       }
+       .product_box .left{
+        float: left;
+        width: 70%;    
+        height: 100%; 
+        padding:10px 0;   /* 后面添加内边距 */
+        border-right:1px dashed #ccc;
+       }
+       .product_box .left>div p{
+        font-size: 10px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+       }
+       /*重置进度条自带设置为的margin-bottom：20px; */
+       .product_box .left>div .progress{
+         margin-bottom:0;
+         
+       }
+        /*重置进度条的字体大小、字体颜色、背景色*/
+       .product_box .left>div .progress > div{
+        color:red;
+        font-size: 15px;
+        background: cyan;
+       }
+       .product_box .right{
+        float: right;
+        width: 30%;
+        height: 100%;
+
+        position: relative; /* 宝和北字需要定位 */
+       }
+       .product_box .right .word{
+        text-align: center;
+        margin-top:35px;
+       }
+       .product_box .right .word span{
+        font-size: 60px;
+        font-family: '黑体';
+        font-weight: bold;
+       }
+       .product_box .right .tips{
+        text-align: center;
+        margin-top:18px;
+       } 
+
+       /*画圆圈*/
+       .product_box::before,
+       .product_box::after{
+        content:'';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        right:28%;
+        /*top:0;*/
+       }
+       .product_box::before{
+        top:-6px;
+        box-shadow: 0px 1px 1px blue;   /*x y 模糊度  阴影颜色*/
+       }
+       .product_box::after{
+        bottom:-6px;
+        box-shadow: 0px -1px 1px blue;
+       }
+
+
+       /*我们不一样的  宝和北字*/
+       .product_box .right>.wjs_tips{
+        position: absolute;   
+          /*需要再给父级设置相对定位*/
+        top:20px;
+        left:0;
+        width: 100%;
+        text-align: center;
+       }
+       .product_box .right>.wjs_tips span{
+        display: inline-block;
+        border:1px solid  red;
+        padding:2px;
+       }
+
+ 
+
+
+     /*6、产品推荐部分 end*/
+
+
+  /*新闻列表 start*/
+  .wjs_news {
+      width: 100%;
+      padding: 50px 0;
+      background: #f0e8e8;
+      border: 1px solid #ddd;
+    }
+
+    .wjs_news h2 {
+      padding:0 20px 20px;  /* 上 左右 下 */
+      font-size: 21px;
+      text-align: center;
+      border-bottom: 1px solid red;
+      position: relative;
+    }
+
+    .wjs_news h2:after {   /*设置下划线*/
+      /*display: block;*/
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid red;
+      
+      position: absolute;
+      right: -10px;
+      bottom: -6px;
+    }
+
+    .wjs_news .wjs_nav_list {
+      border-bottom:none;
+      position: relative;/* 父级 设置相对定位 */
+    }
+/*字体图片的竖直虚线*/
+    .wjs_news .wjs_nav_list .line {
+      content: '';
+      display: block;
+      width: 2px;
+      /*(56+30)86*4 - 40 = 300*/
+      height: 100%;
+      border-left: 1px solid red;
+
+      position: absolute;
+      top: 0px;
+      left: 31px;   /* 子级 设置绝对定位 */
+
+      /*z-index: 0;*/
+    }
+
+    .wjs_news .wjs_nav_list>li {
+      float: left;
+      /*margin-bottom: 40px;*/
+      /*  是否设置该浮动  为什么？
+
+        不设置浮动 更改屏幕宽度的过程 有个时段 字体图片右边的背景少了一半
+
+         */
+    }
+
+    .wjs_news .wjs_nav_list>li>a {
+      border:none;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      background: #CCC;
+      font-size: 30px;
+      text-align: center;
+      padding:0;
+      margin-bottom:30px;
+    }
+    .wjs_news .wjs_nav_list>li:hover>a{
+     background: red;
+     cursor: pointer;
+     color:#FFF;
+    }
+    /*最后一个字体图标去掉下边距*/
+    .wjs_news .wjs_nav_list>li:last-child>a{
+     margin-bottom:0;
+    }
+    .wjs_news .wjs_nav_list>li.active>a,
+    .wjs_news .wjs_nav_list>li.active>a:hover,
+    .wjs_news .wjs_nav_list>li.active>a:focus {
+      color: #FFF;
+      cursor: pointer;
+      background: red;
+    }
+
+    .wjs_news ol.items {
+      list-style: none;
+    }
+
+    .wjs_news ol.items li {
+      /*height: 45px;*/
+      /*line-height: 45px;*/
+      /*padding:20px;*/
+      padding-bottom:30px;
+    }
+    @media (max-width:992px) and (min-width:768px) {
+      .wjs_news .wjs_nav_list>li>a {
+        margin: 30px 30px 30px 0; /* 上右下左 */
+      }
+
+      .wjs_news .wjs_nav_list>li {
+        float: left;
+        /*padding:30px;*/
+        margin-bottom: 0px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wjs_news .wjs_nav_list>li {
+        float: left;
+        margin: 55px 55px 55px 0 ;
+      }
+      .wjs_news .wjs_nav_list>li>a {
+        float: left;
+        margin-bottom:0px;
+      }
+    }
+
+
+    /*底部*/
+    .wjs_footer{
+     padding:40px 0;
+     /*background: pink;*/
+     text-align: center;
+    }
+
+    .wjs_footer h3{
+         font-size: 28px;
+         font-weight: bold;
+         padding:10px 0;
+    }
+    .wjs_footer .container{
+      border: 3px solid #ccc;
+      padding:60px 0;
+    }
+    .wjs_footer .container>.row >div span{
+      font-size: 80px;
+      display: inline-block;
+      transform:scale(1);  /*  默认是原来的大小 */
+      transition:transform 2s;
+    }
+    .wjs_footer .container>.row >div:hover span{
+      /*font-size: 100px;*/
+
+      /*css3动画的放大*/
+       transform:scale(1.5);     /* 放大  1.5倍 */
+      /*transform:scale(0.5); */   /* 缩小  0.5倍 */
+      color:red;
+    }

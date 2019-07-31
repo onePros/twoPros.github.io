@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=no" />
+	<title>wjs_公共底部</title>
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/weijinsuo.css">
+	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <style>
+    .wjs_footer{
+     padding:20px 0;
+     /*background: pink;*/
+     text-align: center;
+    }
+    .wjs_footer .container{
+      border: 1px solid red;
+      padding:60px 0;
+    }
+    .wjs_footer .container>.row >div span{
+      font-size: 60px;
+      display: inline-block;
+      transform:scale(1.5);  /*  默认是原来的大小 */
+      transition:transform 2s;
+    }
+    .wjs_footer .container>.row >div:hover span{
+      /*font-size: 100px;*/
+
+      /*css3动画的放大*/
+       transform:scale(2.5);     /* 放大  1.5倍 */
+      /*transform:scale(0.5); */   /* 缩小  0.5倍 */
+      color:red;
+    }
+  </style>
+</head>
+<body>
+<div class="wjs_footer">
+    <div class="footer-title">
+      <h3>合作伙伴</h3>
+    </div>
+    <div class="container">     <!-- 12-9 = 3 -->
+      <div class="row">
+        <!-- 
+         1、 （利用margin-left实现）
+         col-md-offset  向右偏移量 （整体向右移动  而且只能向右移动） 
+
+          2、以下两种 利用相对定位实现 
+          col-md-pull    向左偏移量
+          col-md-push    向右偏移量
+    
+         -->
+        <!-- 网格系统 12 =   9 + 1 + （左右偏移量各占一份 col-md-offset-1） -->
+        <div class="col-md-1 col-md-offset-1"><span class="wjs_icon wjs_icon_parter01"></span></div>
+        <div class="col-md-1 "><span class="wjs_icon wjs_icon_parter09"></span></div>
+        <div class="col-md-1 "><span class="wjs_icon wjs_icon_parter08"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter01"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter02"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter03"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter04"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter05"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter06"></span></div>
+        <div class="col-md-1"><span class="wjs_icon wjs_icon_parter07"></span></div>
+
+      </div>
+    </div>
+  
+</div>
+
+</body>
+</html>

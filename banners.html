@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	
+	<title>轮播图组件</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css" />
+<!-- css样式重置表 -->
+	<link rel="stylesheet" href="./css/reset.css" />
+<!-- 微金所的css样式 -->
+	<link rel="stylesheet" href="./css/weijinsuo.css" />
+</head>
+<body>
+	
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="500">
+	
+        <!-- 指示器 -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播图片及说明文字 -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+
+          <!-- 原始 只是引入一个img标签 图片宽高被受影响 由于图片自适应 不再是2000x410  -->
+           <!-- <img src="./images/slide_01_2000x410.jpg" alt=""> -->
+
+           <!-- 多加一个div标签 解决子代选择器的问题 中断他们 就不会图片自适应 -->
+            <div>
+              <img class="pic_imgs hidden-xs" src="./images/slide_01_2000x410.jpg" alt="">
+            </div>
+            <a href="#" class="mb_imgBox hidden-sm hidden-md hidden-lg">
+               <img src="./images/slide_04_640x340.jpg" alt="">
+            </a>
+
+          </div>
+          <div class="item">
+
+           <div>
+              <img class="pic_imgs hidden-xs" src="./images/slide_02_2000x410.jpg" alt="">
+           </div>
+           <a href="#" class="mb_imgBox hidden-sm hidden-md hidden-lg">
+               <img src="./images/slide_04_640x340.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="item">
+
+            <div>
+              <img class="pic_imgs hidden-xs" src="./images/slide_03_2000x410.jpg" alt="">
+            </div>
+            <a href="#" class="mb_imgBox hidden-sm hidden-md hidden-lg">
+               <img src="./images/slide_04_640x340.jpg" alt="">
+            </a>
+
+          </div>
+        </div>
+
+        <!-- 控制按钮：左右切换 -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+
+	<script src="lib/jquery/jquery.js" type="text/javascript"></script>
+
+	<script src="lib/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
+
+
+
+<!-- https://www.cnblogs.com/EricZLin/p/9349518.html -->
